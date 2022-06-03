@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+union x{
+   int a;
+   float b;
+   
+};
+ struct z{
+     char name;
+     int data;
+     union x u;
+     
+ };
+ 
+ void main(){
+     struct z s;
+     s.u.a=10;
+     s.u.b=22.2;
+     s.data=20;
+     s.name='k';
+     printf("a=%d\n",s.u.a);
+     printf("b=%.2f\n",s.u.b);
+     printf("name=%c\n",s.name);
+     printf("data=%d",s.data);
+ }

@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+struct x{
+   int a;
+   float b;
+};
+union z{
+   struct x s;
+};
+void main ( ){
+   union z u;
+   u.s.a = 10;
+   u.s.b = 30.5;
+   printf("a=%d\n", u.s.a);
+   printf("b=%.2f", u.s.b);
+}
